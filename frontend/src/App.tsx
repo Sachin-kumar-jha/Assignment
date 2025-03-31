@@ -17,6 +17,7 @@ function App() {
           <Route element={<ProtectedRoute/>}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
+          <Route path="*" element={<Signin/>} />
         </Routes>
       </Router>
       <ToastContainer position="top-center" autoClose={3000} theme="light"   closeButton={true} 
