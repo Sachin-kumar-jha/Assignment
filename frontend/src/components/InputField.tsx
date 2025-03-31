@@ -10,12 +10,12 @@ interface InputFieldProps {
 }
 
 const InputField: React.FC<InputFieldProps> = ({ label, type, register, name, error }) => (
-  <div className="flex flex-col gap-1">
+  <div className="flex w-full flex-col">
     <input 
       placeholder={label} 
       {...register(name, { required: `${label} is required` })} 
       type={type} 
-      className="border px-5 py-1 rounded-md" 
+      className="border px-3 py-2.5 rounded-lg focus:outline-none text-zinc-900 font-medium t text-lg tracking-wider shadow-sm" 
     />
     {error && <span className="text-red-500 text-sm">{error}</span>}
   </div>
